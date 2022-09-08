@@ -24,7 +24,7 @@ namespace XNJNUA
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public List<TodoItem> Todos { get; set; } = new List<TodoItem>()
+        public static List<TodoItem> Todos { get; set; } = new List<TodoItem>()
         {
             new TodoItem()
             {
@@ -55,7 +55,7 @@ namespace XNJNUA
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(TodoDetalsPage), null);
+            Frame.Navigate(typeof(TodoDetailsPage), null);
         }
     }
 }

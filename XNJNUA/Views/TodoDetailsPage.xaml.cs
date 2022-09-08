@@ -21,18 +21,28 @@ namespace XNJNUA.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class TodoDetalsPage : Page
+    public sealed partial class TodoDetailsPage : Page
     {
-        public TodoItem Todo { get; set; }
+        public TodoItem Todo { get; set; } = new TodoItem
+        {
+            Deadline = DateTimeOffset.Now
+        };
+
         public IEnumerable<Priority> PriorityDisplayNames 
         {
             get => Enum.GetValues(typeof(Priority)).Cast<Priority>();
         }
 
-        public TodoDetalsPage()
+        public TodoDetailsPage()
         {
             this.InitializeComponent();
             DataContext = this;
+        }
+
+        private void SaveTodo(object sender, RoutedEventArgs e)
+        {
+            MainPage.Todos.Add(Todo);
+            Frame.Navigate(typeof(MainPage), null);
         }
     }
 }
