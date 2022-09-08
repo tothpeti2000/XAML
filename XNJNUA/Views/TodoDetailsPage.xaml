@@ -32,34 +32,34 @@
                 Margin="0,0,0,24"
                 HorizontalAlignment="Left"
                 Header="Title"
-                Text="{Binding Todo.Title, Mode=TwoWay}" />
+                Text="{x:Bind Todo.Title, Mode=TwoWay}" />
 
             <TextBox
                 Width="400"
                 Margin="0,0,0,24"
                 HorizontalAlignment="Left"
                 Header="Description"
-                Text="{Binding Todo.Description, Mode=TwoWay}" />
+                Text="{x:Bind Todo.Description, Mode=TwoWay}" />
 
             <ComboBox
                 Width="200"
                 Margin="0,0,0,24"
                 HorizontalAlignment="Left"
-                ItemsSource="{Binding PriorityDisplayNames}"
+                ItemsSource="{x:Bind PriorityDisplayNames}"
                 PlaceholderText="Priority"
-                SelectedItem="{Binding Todo.Priority, Mode=TwoWay}" />
+                SelectedItem="{x:Bind Todo.Priority, Mode=TwoWay}" />
 
             <DatePicker
                 Width="400"
                 Margin="0,0,0,24"
                 HorizontalAlignment="Left"
-                Date="{Binding Todo.Deadline, Mode=TwoWay}"
+                Date="{x:Bind Todo.Deadline, Mode=TwoWay}"
                 Header="Deadline" />
 
             <CheckBox
                 Margin="0,0,0,24"
                 Content="Done"
-                IsChecked="{Binding Todo.IsDone, Mode=TwoWay}" />
+                IsChecked="{x:Bind Todo.IsDone, Mode=TwoWay}" />
 
             <Button
                 Width="100"

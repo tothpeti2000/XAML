@@ -36,7 +36,11 @@
             </CommandBar.Content>
         </CommandBar>
 
-        <ListView Grid.Row="1" ItemsSource="{Binding Todos}">
+        <ListView
+            Grid.Row="1"
+            IsItemClickEnabled="True"
+            ItemClick="GoToDetails"
+            ItemsSource="{Binding Todos}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

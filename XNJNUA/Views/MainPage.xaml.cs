@@ -50,12 +50,25 @@ namespace XNJNUA
         public MainPage()
         {
             this.InitializeComponent();
+
+            NavigationCacheMode = NavigationCacheMode.Required;
             DataContext = this;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(TodoDetailsPage), null);
+        }
+
+        private void GoToDetails(object sender, ItemClickEventArgs e)
+        {
+            var todo = e.ClickedItem as TodoItem;
+            Frame.Navigate(typeof(TodoDetailsPage), todo);
         }
     }
 }

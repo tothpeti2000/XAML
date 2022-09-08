@@ -39,6 +39,17 @@ namespace XNJNUA.Views
             DataContext = this;
         }
 
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            if (e.Parameter is TodoItem todo)
+            {
+                Todo = todo;
+            }
+        }
+
         private void SaveTodo(object sender, RoutedEventArgs e)
         {
             MainPage.Todos.Add(Todo);
