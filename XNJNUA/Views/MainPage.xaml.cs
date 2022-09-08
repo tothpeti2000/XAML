@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using XNJNUA.Models;
+using XNJNUA.Views;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -50,6 +51,11 @@ namespace XNJNUA
         {
             this.InitializeComponent();
             DataContext = this;
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(TodoDetalsPage), null);
         }
     }
 }

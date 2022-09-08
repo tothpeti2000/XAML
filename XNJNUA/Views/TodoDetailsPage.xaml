@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="XNJNUA.Views.TodoDetalsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:XNJNUA.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid>
+        <CommandBar VerticalContentAlignment="Center" DefaultLabelPosition="Right">
+            <CommandBar.Content>
+                <TextBlock
+                    Margin="12,0,0,0"
+                    Style="{ThemeResource TitleTextBlockStyle}"
+                    Text="Részletek" />
+            </CommandBar.Content>
+        </CommandBar>
+    </Grid>
+</Page>
