@@ -9,7 +9,15 @@
     mc:Ignorable="d">
 
     <Grid>
-        <CommandBar VerticalContentAlignment="Center" DefaultLabelPosition="Right">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <CommandBar
+            Grid.Row="0"
+            VerticalContentAlignment="Center"
+            DefaultLabelPosition="Right">
             <CommandBar.Content>
                 <TextBlock
                     Margin="12,0,0,0"
@@ -17,5 +25,43 @@
                     Text="Részletek" />
             </CommandBar.Content>
         </CommandBar>
+
+        <StackPanel Grid.Row="1" Padding="50,20">
+            <TextBox
+                Width="400"
+                Margin="0,0,0,24"
+                HorizontalAlignment="Left"
+                Header="Title"
+                Text="{Binding Todo.Title}" />
+
+            <TextBox
+                Width="400"
+                Margin="0,0,0,24"
+                HorizontalAlignment="Left"
+                Header="Description"
+                Text="{Binding Todo.Description}" />
+
+            <ComboBox
+                Width="200"
+                Margin="0,0,0,24"
+                HorizontalAlignment="Left"
+                ItemsSource="{Binding PriorityDisplayNames}"
+                PlaceholderText="Priority"
+                SelectedItem="{Binding Todo.Priority}" />
+
+            <DatePicker
+                Width="400"
+                Margin="0,0,0,24"
+                HorizontalAlignment="Left"
+                Date="{Binding Todo.Deadline}"
+                Header="Deadline" />
+
+            <CheckBox
+                Margin="0,0,0,24"
+                Content="Done"
+                IsChecked="{Binding Todo.IsDone}" />
+
+            <Button Width="100" Content="Save" />
+        </StackPanel>
     </Grid>
 </Page>
