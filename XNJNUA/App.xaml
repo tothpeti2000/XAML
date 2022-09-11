@@ -4,4 +4,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:XNJNUA">
 
+    <Application.Resources>
+        <Style x:Key="AppCommandBar" TargetType="CommandBar">
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="DefaultLabelPosition" Value="Right" />
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <TextBlock
+                            Margin="12,0,0,0"
+                            Style="{ThemeResource TitleTextBlockStyle}"
+                            Text="{Binding}" />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+
 </Application>

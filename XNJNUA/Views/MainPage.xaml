@@ -22,19 +22,12 @@
 
         <CommandBar
             Grid.Row="0"
-            VerticalContentAlignment="Center"
-            DefaultLabelPosition="Right">
+            Content="Teendők"
+            Style="{StaticResource AppCommandBar}">
             <AppBarButton
                 Click="AddButton_Click"
                 Icon="Add"
                 Label="Hozzáadás" />
-
-            <CommandBar.Content>
-                <TextBlock
-                    Margin="12,0,0,0"
-                    Style="{ThemeResource TitleTextBlockStyle}"
-                    Text="Teendők" />
-            </CommandBar.Content>
         </CommandBar>
 
         <ListView

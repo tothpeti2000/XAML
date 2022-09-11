@@ -16,15 +16,8 @@
 
         <CommandBar
             Grid.Row="0"
-            VerticalContentAlignment="Center"
-            DefaultLabelPosition="Right">
-            <CommandBar.Content>
-                <TextBlock
-                    Margin="12,0,0,0"
-                    Style="{ThemeResource TitleTextBlockStyle}"
-                    Text="Részletek" />
-            </CommandBar.Content>
-        </CommandBar>
+            Content="Részletek"
+            Style="{StaticResource AppCommandBar}" />
 
         <StackPanel Grid.Row="1" Padding="50,20">
             <TextBox
