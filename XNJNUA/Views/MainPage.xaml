@@ -42,22 +42,22 @@
             IsItemClickEnabled="True"
             ItemClick="GoToDetails"
             ItemsSource="{Binding Todos}">
+
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel
-                        MinWidth="350"
-                        Padding="10"
-                        Background="{Binding Priority, Converter={StaticResource PriorityToBackgroundConverter}}">
-                        <Grid>
-                            <TextBlock FontWeight="SemiBold" Text="{Binding Title}" />
-                            <SymbolIcon
-                                HorizontalAlignment="Right"
-                                Symbol="Accept"
-                                Visibility="{Binding IsDone, Converter={StaticResource BoolToVisibilityConverter}}" />
-                        </Grid>
+                    <Border BorderBrush="{Binding Priority, Converter={StaticResource PriorityToBackgroundConverter}}" BorderThickness="10,0,0,0">
+                        <StackPanel Padding="10">
+                            <Grid>
+                                <TextBlock FontWeight="SemiBold" Text="{Binding Title}" />
+                                <SymbolIcon
+                                    HorizontalAlignment="Right"
+                                    Symbol="Accept"
+                                    Visibility="{Binding IsDone, Converter={StaticResource BoolToVisibilityConverter}}" />
+                            </Grid>
 
-                        <TextBlock Text="{Binding Deadline}" />
-                    </StackPanel>
+                            <TextBlock Text="{Binding Deadline}" />
+                        </StackPanel>
+                    </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
